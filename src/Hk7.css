@@ -1,0 +1,47 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .card {
+    border: 2px solid yellow;
+    background-color: black;
+    width: 40%;
+    padding: 20px 20px;
+    margin: 20px 43px;
+    float: left;
+    box-shadow: 0 10px 20px 0 black;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 20px 0 yellow;
+  }
+  
+  #Artis {
+    color: yellow;
+  }
+  
+  #Title {
+    color: yellow;
+  }
+  
+  #btnPlay {
+    align-items: center;
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    color: yellow;
+    cursor: pointer;
+    font-size: 10px;
+    height: 30px;
+    line-height: 24px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #btnPlay:hover {
+    color: black;
+    background-color: yellow;
+  }
+  
