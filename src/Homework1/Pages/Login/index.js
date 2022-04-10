@@ -1,5 +1,3 @@
-import React, { Component }  from 'react';
-
 const Login =()=>{
     var client_id = process.env.REACT_APP_SPOTIFY_KEY;
     var redirect_uri = 'http://localhost:3000';

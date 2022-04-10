@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
 import Tracks from "./container";
-
 
 const Playlist = ({combinedTracks, handleSelectedTrack}) => {
 
