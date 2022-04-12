@@ -1,25 +1,12 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
   background-color: antiquewhite;
-}
-
-.card {
-  background-color:#454545;
-  width: 35%;
-  padding: 20px 20px;
-  margin: 20px 43px;
-  float: left;
-  box-shadow: 0 10px 20px 0 black;
-}
-
-.card:hover {
-  box-shadow: 0 10px 20px 0 white;
-}
-
-#namaArtist, #namaLagu, #namaAlbum  {
-  color: white;
-  font-family: cursive;
 }
 
 #btnPlay {

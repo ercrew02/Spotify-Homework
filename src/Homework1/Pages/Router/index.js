@@ -16,11 +16,9 @@ function AppRoute() {
     return (
       <Router>
         <div >
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            {/* <li><Link to="/login">Loginmmm</Link></li> */}
-            <li><Link to="/createplaylist">Create Playlist</Link></li>
-          </ul>
+            <Link to="/">Home</Link>
+            <br/>
+            <Link to="/createplaylist">Create Playlist</Link>
         </div>
         <Switch>
           <div className='App'>
