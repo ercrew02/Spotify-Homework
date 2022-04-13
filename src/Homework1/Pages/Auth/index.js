@@ -4,13 +4,10 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { setAccessToken } from "../../reduxThing/acssTokenSlice"
 import Login from '../Login/index';
-import { Router } from 'react-router-dom';
 // import { useHistory } from 'react-router-dom';
 import {
     BrowserRouter as Routerr,
-    Switch,
     Route,
-    Redirect,
     Link
   } from "react-router-dom";
 
@@ -26,22 +23,10 @@ const Home = () => {
         console.log(accessToken);
     }, [accessToken, dispatch])
 
-    // if(accessToken !== undefined){
-    //     return(
-    //         <Search  />
-    //     )
-    // }
-    // else{
-    //     return(
-    //         <Login/>
-            
-    //     )
-    // }
     return(
         <Routerr>
             <Link to="/login">Login</Link>
             <Route path='/login'>
-
                 <br/>
             <Login /> 
             </Route>

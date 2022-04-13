@@ -1,4 +1,5 @@
 import "../../../model.css"
+import Button from '@mui/material/Button';
 
 const Tracks = ({track, handleSelectedTrack}) => {
     
@@ -12,7 +13,14 @@ const Tracks = ({track, handleSelectedTrack}) => {
         <div>
         <p id='Title'>{songName}</p>
         <p id='Artis'>{track.artists[0].name}</p>
-        <button onClick={() => handleSelectedTrack(uri)}>{isSelected ? 'Deselect' : 'Select'}</button>
+        <Button 
+        variant="contained" 
+        disableElevation 
+        className="selectButton" 
+        type="submit" 
+        value="Submit"onClick={() => handleSelectedTrack(uri)}>
+            {isSelected ? 'Deselect' : 'Select'}
+        </Button>
         </div>
         
     </div>

@@ -4,6 +4,8 @@ import Playlist from "../../Component/Tracks/index";
 import Alist from "../create-playlist";
 import Profile from "../../Component/Profile/index";
 import { useSelector } from "react-redux";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function Search() {
   const accessToken = useSelector((state) => state.accessToken.value)
@@ -120,10 +122,8 @@ function Search() {
         handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
         addPlaylistData={addPlaylistData}
       />
-      <input onChange={handleOnChange} />
-      <button onClick={() => { getTracks(accessToken) }}>
-        Search
-      </button>
+      <TextField id="standard-basic" label="Search Music" variant="standard" onChange={handleOnChange}/>
+      <Button variant="contained" onClick={() => { getTracks(accessToken) }}>Search</Button>
 
       {combinedTracks !== undefined && (
         <Playlist combinedTracks={combinedTracks} handleSelectedTrack={handleSelectedTrack} />
