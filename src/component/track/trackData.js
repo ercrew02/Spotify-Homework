@@ -12,7 +12,11 @@ const Track = ({ Judul, Artist, Album, Cover, Link }) => (
   </div>
 );
 
-export default function AList() {
+type Props{
+
+}
+
+export default function Alist() {
   const data = [
     {
       album: {
@@ -821,4 +825,4 @@ export default function AList() {
   ));
 }
 
-export { AList };
+export { Alist };

@@ -1,7 +1,6 @@
 import Search from '../Search';
-// import Login from '../Login';
 import Home from '../Auth';
-import { useSelector} from "react-redux";
+import {RootStateOrAny, useSelector} from "react-redux";
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,7 +11,7 @@ import {
 
 function AppRoute() {
     // const isLogin = true;
-    const accessToken = useSelector((state) => state.accessToken.value);
+    const accessToken = useSelector((state: RootStateOrAny) => state.accessToken.value);
     return (
       <Router>
         <div >

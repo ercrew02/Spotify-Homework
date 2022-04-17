@@ -1,6 +1,13 @@
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Button from '@mui/material/Button';
+// import { Response } from "../../../Api/fetchSearch";
+
+// type Props = {
+//     combinedTracksWithSelectedTrack: Response,
+//     handleAddItemToPlaylist: (e: any) => void,
+//     handleAddPlaylistOnChange: (e: any) => void
+//   }
 
 const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlaylistData, playlistID, selectedTracks }) => {
     return (

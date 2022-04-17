@@ -1,4 +1,3 @@
-import React from "react";
 import { AList } from "../track/trackData";
 
 function HomeComponent() {

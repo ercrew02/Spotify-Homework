@@ -7,13 +7,13 @@ const Playlist = ({combinedTracks, handleSelectedTrack}) => {
         
         const {uri} = item;
         return (
-            <div class= "item">
+            <div className= "item">
             <Tracks  key={uri} track={item} handleSelectedTrack={handleSelectedTrack}/>
             </div>
         )
     })
     return(
-        <div class= "container">
+        <div className= "container">
         {Loop}
         </div>
     )

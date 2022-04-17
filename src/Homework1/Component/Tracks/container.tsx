@@ -6,7 +6,7 @@ const Tracks = ({track, handleSelectedTrack}) => {
     const { album, name: songName, isSelected, uri} =track;
 
     return(
-    <div class="flex-container">
+    <div className="flex-container">
         <div>
         <img src={album.images[2].url} id='Cover' alt="This Must Be a Album Cover"></img>
         </div>

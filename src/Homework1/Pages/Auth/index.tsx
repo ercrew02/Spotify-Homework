@@ -1,19 +1,22 @@
 import React from 'react';
 import queryString from 'query-string';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { setAccessToken } from "../../reduxThing/acssTokenSlice"
 import Login from '../Login/index';
-// import { useHistory } from 'react-router-dom';
 import {
     BrowserRouter as Routerr,
     Route,
     Link
   } from "react-router-dom";
 
+
+
 const Home = () => {
     //const [accessToken, setAccessToken] = useState('');
-    const accessToken = useSelector((state) => state.accessToken.value);
+    
+    const accessToken = useSelector((state: RootStateOrAny) => state.accessToken.value);
+    // const accessToken = useSelector((state) => state.accessToken.value);
     const dispatch = useDispatch();
     // const history = useHistory(); 
 
