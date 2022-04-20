@@ -8,7 +8,7 @@ const Tracks = ({track, handleSelectedTrack}) => {
     return(
     <div className="flex-container">
         <div>
-        <img src={album.images[2].url} id='Cover' alt="This Must Be a Album Cover"></img>
+        <img src={album.images[1].url} id='Cover' alt="This Must Be a Album Cover"></img>
         </div>
         <div>
         <p id='Title'>{songName}</p>

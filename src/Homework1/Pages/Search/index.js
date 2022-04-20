@@ -112,23 +112,30 @@ function Search() {
 
   return (
     <div>
-      <Profile
-        fetchUserData={fetchUserData}
-        user={user}
-      />
-
-      <Alist
-        handleAddPlaylistOnChange={handleAddPlaylistOnChange}
-        handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
-        addPlaylistData={addPlaylistData}
-      />
-      <TextField id="standard-basic" label="Search Music" variant="standard" onChange={handleOnChange}/>
-      <Button variant="contained" onClick={() => { getTracks(accessToken) }}>Search</Button>
-
-      {combinedTracks !== undefined && (
-        <Playlist combinedTracks={combinedTracks} handleSelectedTrack={handleSelectedTrack} />
-      )}
-
+      <div data-testid="profileTest">
+        <Profile
+          fetchUserData={fetchUserData}
+          user={user}
+        />
+      </div>
+      <div data-testid="createListTest">
+        <Alist 
+          handleAddPlaylistOnChange={handleAddPlaylistOnChange}
+          handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
+          addPlaylistData={addPlaylistData}
+        />
+      </div>
+      <div data-testid="searchBarTest">
+        <div className="searchBar">
+          <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
+          <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
+        </div>
+      </div>
+      <div data-testid="playlistTest">
+        {combinedTracks !== undefined && (
+          <Playlist combinedTracks={combinedTracks} handleSelectedTrack={handleSelectedTrack} />
+        )}
+      </div>
     </div>
   );
 
@@ -137,3 +144,4 @@ function Search() {
 }
 
 export default Search;
+

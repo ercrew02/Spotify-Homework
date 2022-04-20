@@ -1,4 +1,3 @@
-import React from 'react';
 import queryString from 'query-string';
 import { useEffect } from 'react';
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
