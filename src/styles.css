@@ -1,0 +1,39 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: antiquewhite;
+  height: 1000px;
+}
+
+#btnPlay {
+  align-items: center;
+  background-color: #008090 ;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  height: 30px;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#btnPlay:hover {
+  color: black;
+  background-color: #008060 ;
+}
+
+
+.playlist-form{
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+}

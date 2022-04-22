@@ -1,0 +1,26 @@
+.container{
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 30% 30% 30%;
+  background-color: #e5bb66;
+  padding: 10px;
+  text-align: center;
+}
+
+.item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  margin: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flex-container > div {
+  text-align: center;
+}
+
+
