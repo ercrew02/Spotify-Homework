@@ -2,14 +2,7 @@ import queryString from 'query-string';
 import { useEffect } from 'react';
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { setAccessToken } from "../../reduxThing/acssTokenSlice"
-import Login from '../Login/index';
-import {
-    BrowserRouter as Routerr,
-    Route,
-    Link
-  } from "react-router-dom";
-
-
+import Login from "../Login"
 
 const Home = () => {
     //const [accessToken, setAccessToken] = useState('');
@@ -26,13 +19,11 @@ const Home = () => {
     }, [accessToken, dispatch])
 
     return(
-        <Routerr>
-            <Link to="/login">Login</Link>
-            <Route path='/login'>
-                <br/>
-            <Login /> 
-            </Route>
-        </Routerr>
+        <>
+        <Login /> 
+        </>
+            
+
         )
 
 }

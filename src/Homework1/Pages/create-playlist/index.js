@@ -1,15 +1,8 @@
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Button from '@mui/material/Button';
-// import { Response } from "../../../Api/fetchSearch";
 
-// type Props = {
-//     combinedTracksWithSelectedTrack: Response,
-//     handleAddItemToPlaylist: (e: any) => void,
-//     handleAddPlaylistOnChange: (e: any) => void
-//   }
-
-const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlaylistData, playlistID, selectedTracks }) => {
+const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlaylistData}) => {
     return (
         <div className="playlist-form">
             <h2>Create Playlist</h2>
@@ -19,14 +12,14 @@ const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlayli
                 <br />
                 <label htmlFor="description"> Description </label><br />
                 <TextareaAutosize
-      aria-label="minimum height"
-      minRows={3}
-      placeholder="Description About Your Playlist"
-      style={{ width: 200 }}
-      type="text" 
-      name="description" 
-      value={addPlaylistData.description} 
-      onChange={handleAddPlaylistOnChange} 
+                aria-label="minimum height"
+                minRows={3}
+                placeholder="Description About Your Playlist"
+                style={{ width: 200 }}
+                type= "text" 
+                name="description" 
+                value={addPlaylistData.description} 
+                onChange={handleAddPlaylistOnChange} 
     />
                 <br />
                 <Button variant="contained" disableElevation className="selectButton" type="submit" value="Submit">
@@ -34,6 +27,7 @@ const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlayli
     </Button>
             </form>
         </div>
+        
     )
 }
 

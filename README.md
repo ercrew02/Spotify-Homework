@@ -1,3 +1,36 @@
+# Name
+My Project Name is SPOTIFY PLAYLIST
+
+# Description
+This project contains an application that can provide services to users to add playlists which will later be added to the user's spotify account.
+
+# Feature
+This project has features including
+Login
+Select songs with select button and add playlist with deselect button
+Add the selected song by pressing the submit button
+Displays the name of the user who has successfully logged in
+Home button which takes us to the start page
+Login button which takes us to the login page
+Add Playlist button which takes us to the menu add playlist
+
+# How to install and how to run the application
+To run this application there are several things that need to be installed, including:
+npm install
+npm i axios
+npm i query-string
+npm install react-redux @reduxjs/toolkit
+npm install react-router-dom@5.3.0
+npm install react@17.0.0 react-dom@17.0.0
+npm install eslint --save-dev
+npm install @mui/material @emotion/react @emotion/styled
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+npm run build
+npm install -g serve
+serve -s build
+Then to run it
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

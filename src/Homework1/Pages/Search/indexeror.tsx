@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import Playlist from "../../Component/Tracks/index";
 import Alist from "../create-playlist";
@@ -7,10 +7,11 @@ import { RootStateOrAny, useSelector } from "react-redux";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Response } from "../../../Api/fetchSearch";
+import { SearchResult2 } from "../../../Api/fetchSearch";
 
 function Search() {
   const accessToken = useSelector((state: RootStateOrAny) => state.accessToken.value)
-  const [combinedTracks, setCombinedTracks] = useState([]);
+  const [combinedTracks, setCombinedTracks] = useState<SearchResult2[]>([]);
   
   //Query
   const [query, setQuery] = useState("");
@@ -63,10 +64,10 @@ function Search() {
 
   useEffect(() => {
     const combinedTracksWithSelectedTrack = data.map((track) => ({
-      ...track as object,
-      isSelected: selectedTrack.find(selectedTrack => selectedTrack === track.uri),
+      ...track,
+      isSelected: !!selectedTrack.find(selectedTrack => selectedTrack === track.uri),
     }));
-    // setCombinedTracks(combinedTracksWithSelectedTrack);
+    setCombinedTracks(combinedTracksWithSelectedTrack);
   }, [selectedTrack, data]);
 
 
@@ -101,11 +102,11 @@ function Search() {
   }
 
   
-  const handleAddPlaylistOnChange = e => {
+  const handleAddPlaylistOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setAddPlaylistData({ ...addPlaylistData, [name]: value })
   }
-  const handleAddPlaylistOnSubmit = async e => {
+  const handleAddPlaylistOnSubmit = async (e: FormEvent) => {
     e.preventDefault();
     console.log(addPlaylistData);
     await axios
@@ -126,11 +127,11 @@ function Search() {
         fetchUserData={fetchUserData}
         user={user}
       />
-      {/* <Alist
+      <Alist
         handleAddPlaylistOnChange={handleAddPlaylistOnChange}
         handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
         addPlaylistData={addPlaylistData}
-      /> */}
+      />
       <div className="searchBar">
         <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
         <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
