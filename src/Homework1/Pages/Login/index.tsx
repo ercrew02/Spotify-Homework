@@ -1,6 +1,6 @@
 const Login =()=>{
     var client_id = process.env.REACT_APP_SPOTIFY_KEY;
-    var redirect_uri = 'https://spotify-homework.vercel.app/';
+    var redirect_uri = 'https://spotify-homework-bmz0uyucg-ercrew02.vercel.app/';
 
     var scope = 'playlist-modify-private';
 
